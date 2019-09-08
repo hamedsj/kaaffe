@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="SignUpLoginBinding">
+        <variable
+            name="SLViewModel"
+            type="ir.pitok.cafe.viewModels.SignUpLoginViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="RedundantNamespace">
+
+        <ImageView
+            android:id="@+id/SLBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/splash_bg"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/SLLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/circle_white"
+            android:padding="10dp"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/SLSignUpCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:srcCompat="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/SLSignUpCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            app:cardCornerRadius="8dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SLLogo"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/SLSignUpUsernameEt"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginRight="24dp"
+                            android:background="@drawable/rc_round_transparent35_gray"
+                            android:fontFamily="@font/is"
+                            android:hint="@string/username"
+                            android:inputType="text"
+                            android:gravity="right"
+                            android:padding="8dp"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorSecondaryText"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="Autofill,SpUsage" />
+
+                        <EditText
+                            android:id="@+id/SLSignUpPhoneNumberEt"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginRight="24dp"
+                            android:background="@drawable/rc_round_transparent35_gray"
+                            android:fontFamily="@font/is"
+                            android:gravity="right"
+                            android:hint="@string/phone_number"
+                            android:inputType="number"
+                            android:padding="8dp"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorSecondaryText"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SLSignUpUsernameEt"
+                            tools:ignore="Autofill,RtlHardcoded,SpUsage,TextFields" />
+
+                        <EditText
+                            android:id="@+id/SLSignUpPassEt"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginRight="24dp"
+                            android:background="@drawable/rc_round_transparent35_gray"
+                            android:fontFamily="@font/is"
+                            android:gravity="right"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorSecondaryText"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SLSignUpPhoneNumberEt"
+                            tools:ignore="Autofill,RtlHardcoded,SpUsage,TextFields" />
+
+                        <EditText
+                            android:id="@+id/SLSignUpConfirmPassEt"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginRight="24dp"
+                            android:background="@drawable/rc_round_transparent35_gray"
+                            android:fontFamily="@font/is"
+                            android:gravity="right"
+                            android:hint="@string/retype_password"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorSecondaryText"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/SLSignUpPassEt"
+                            tools:ignore="Autofill,RtlHardcoded,SpUsage,TextFields" />
+
+                        <Button
+                            android:id="@+id/SLSignUpDarkBt"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginBottom="24dp"
+                            android:background="@drawable/rc_round_brown"
+                            android:fontFamily="@font/is"
+                            android:text="@string/signup"
+                            android:textColor="@color/colorTextIcon"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="@+id/SLSignUpConfirmPassEt"
+                            app:layout_constraintStart_toEndOf="@+id/SLSignUpStrokeBt"
+                            app:layout_constraintTop_toBottomOf="@+id/SLSignUpConfirmPassEt"
+                            tools:ignore="RtlHardcoded,SpUsage" />
+
+                        <Button
+                            android:id="@+id/SLSignUpStrokeBt"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rc_st_round_brown"
+                            android:fontFamily="@font/is"
+                            android:text="@string/login"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/SLSignUpDarkBt"
+                            app:layout_constraintStart_toStartOf="@+id/SLSignUpConfirmPassEt"
+                            app:layout_constraintTop_toTopOf="@+id/SLSignUpDarkBt"
+                            tools:ignore="SpUsage" />
+
+                        <Button
+                            android:id="@+id/SLSignUpWithGoogleBt"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginBottom="24dp"
+                            android:background="@drawable/rc_st_round_brown"
+                            android:fontFamily="@font/is"
+                            android:text="@string/login_with_google"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/SLSignUpDarkBt"
+                            app:layout_constraintStart_toStartOf="@+id/SLSignUpStrokeBt"
+                            app:layout_constraintTop_toBottomOf="@+id/SLSignUpDarkBt"
+                            tools:ignore="SpUsage" />
+
+                        <ProgressBar
+                            android:id="@+id/SLSignUpLoading"
+                            android:theme="@style/LightProgressBarTheme"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:visibility="invisible"
+                            app:layout_constraintBottom_toBottomOf="@+id/SLSignUpDarkBt"
+                            app:layout_constraintEnd_toEndOf="@+id/SLSignUpDarkBt"
+                            app:layout_constraintStart_toStartOf="@+id/SLSignUpDarkBt"
+                            app:layout_constraintTop_toTopOf="@+id/SLSignUpDarkBt" />
+
+                        <ProgressBar
+                            android:id="@+id/SLSignUpGoogleLoading"
+                            android:theme="@style/BrownProgressBarTheme"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:visibility="invisible"
+                            app:layout_constraintBottom_toBottomOf="@+id/SLSignUpWithGoogleBt"
+                            app:layout_constraintEnd_toEndOf="@+id/SLSignUpWithGoogleBt"
+                            app:layout_constraintStart_toStartOf="@+id/SLSignUpWithGoogleBt"
+                            app:layout_constraintTop_toTopOf="@+id/SLSignUpWithGoogleBt" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/SLLoginCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            app:cardCornerRadius="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SLLogo"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/SLLoginUsernameEt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rc_round_transparent35_gray"
+                    android:fontFamily="@font/is"
+                    android:hint="@string/username"
+                    android:inputType="text"
+                    android:gravity="right"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textColorHint="@color/colorSecondaryText"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="Autofill,SpUsage" />
+
+                <EditText
+                    android:id="@+id/SLLoginPassEt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rc_round_transparent35_gray"
+                    android:fontFamily="@font/is"
+                    android:gravity="right"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textColorHint="@color/colorSecondaryText"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/SLLoginUsernameEt"
+                    tools:ignore="Autofill,RtlHardcoded,SpUsage,TextFields" />
+
+                <Button
+                    android:id="@+id/SLLoginDarkBt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/rc_round_brown"
+                    android:fontFamily="@font/is"
+                    android:text="@string/login"
+                    android:textColor="@color/colorTextIcon"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="@+id/SLLoginPassEt"
+                    app:layout_constraintStart_toEndOf="@+id/SLLoginStrokeBt"
+                    app:layout_constraintTop_toBottomOf="@+id/SLLoginPassEt"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <Button
+                    android:id="@+id/SLLoginStrokeBt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rc_st_round_brown"
+                    android:fontFamily="@font/is"
+                    android:text="@string/signup"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/SLLoginDarkBt"
+                    app:layout_constraintStart_toStartOf="@+id/SLLoginPassEt"
+                    app:layout_constraintTop_toTopOf="@+id/SLLoginDarkBt"
+                    tools:ignore="SpUsage" />
+
+                <Button
+                    android:id="@+id/SLLoginWithGoogleBt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/rc_st_round_brown"
+                    android:fontFamily="@font/is"
+                    android:text="@string/login_with_google"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="@+id/SLLoginDarkBt"
+                    app:layout_constraintStart_toStartOf="@+id/SLLoginStrokeBt"
+                    app:layout_constraintTop_toBottomOf="@+id/SLLoginDarkBt"
+                    tools:ignore="SpUsage" />
+
+                <ProgressBar
+                    android:id="@+id/SLLoginLoading"
+                    android:theme="@style/LightProgressBarTheme"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/SLLoginDarkBt"
+                    app:layout_constraintEnd_toEndOf="@+id/SLLoginDarkBt"
+                    app:layout_constraintStart_toStartOf="@+id/SLLoginDarkBt"
+                    app:layout_constraintTop_toTopOf="@+id/SLLoginDarkBt" />
+
+                <ProgressBar
+                    android:id="@+id/SLLoginGoogleLoading"
+                    android:theme="@style/BrownProgressBarTheme"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/SLLoginWithGoogleBt"
+                    app:layout_constraintEnd_toEndOf="@+id/SLLoginWithGoogleBt"
+                    app:layout_constraintStart_toStartOf="@+id/SLLoginWithGoogleBt"
+                    app:layout_constraintTop_toTopOf="@+id/SLLoginWithGoogleBt" />
+
+                <TextView
+                    android:id="@+id/SLLoginForgetPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/is"
+                    android:text="@string/forget_password"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/SLLoginWithGoogleBt"
+                    app:layout_constraintTop_toBottomOf="@+id/SLLoginWithGoogleBt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/SLForgetPassCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            app:cardCornerRadius="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SLLogo"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/SLForgetPassBack"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/back_bg_brown"
+                    android:src="@drawable/back"
+                    android:padding="4dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+
+                <EditText
+                    android:id="@+id/SLForgetPassUsernameEt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rc_round_transparent35_gray"
+                    android:fontFamily="@font/is"
+                    android:gravity="right"
+                    android:hint="@string/username_or_phone_number"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textColorHint="@color/colorSecondaryText"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/SLForgetPassBack"
+                    tools:ignore="Autofill,SpUsage" />
+
+                <Button
+                    android:id="@+id/SLForgetPassDarkBt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/rc_round_brown"
+                    android:fontFamily="@font/is"
+                    android:text="@string/recovery_password"
+                    android:textColor="@color/colorTextIcon"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/SLForgetPassUsernameEt"
+                    app:layout_constraintStart_toStartOf="@+id/SLForgetPassUsernameEt"
+                    app:layout_constraintTop_toBottomOf="@+id/SLForgetPassUsernameEt"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <ProgressBar
+                    android:id="@+id/SLForgetPassLoading"
+                    android:theme="@style/LightProgressBarTheme"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/SLForgetPassDarkBt"
+                    app:layout_constraintEnd_toEndOf="@+id/SLForgetPassDarkBt"
+                    app:layout_constraintStart_toStartOf="@+id/SLForgetPassDarkBt"
+                    app:layout_constraintTop_toTopOf="@+id/SLForgetPassDarkBt" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/SLConfirmCodeCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            app:cardCornerRadius="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SLLogo"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/SLConfirmCodeBack"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/back_bg_brown"
+                    android:src="@drawable/back"
+                    android:padding="4dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/SLConfirmCodeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:fontFamily="@font/is"
+                    android:textSize="13dp"
+                    android:gravity="center"
+                    android:text="@{SLViewModel.confirmCodeText}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/SLConfirmCodeEt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rc_round_transparent35_gray"
+                    android:fontFamily="@font/is"
+                    android:hint="@string/confirm_code"
+                    android:inputType="number"
+                    android:gravity="right"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textColorHint="@color/colorSecondaryText"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/SLConfirmCodeText"
+                    tools:ignore="Autofill,SpUsage" />
+
+                <Button
+                    android:id="@+id/SLConfirmCodeDarkBt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/rc_round_brown"
+                    android:fontFamily="@font/is"
+                    android:text="@string/send_confirm_code"
+                    android:textColor="@color/colorTextIcon"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/SLConfirmCodeEt"
+                    app:layout_constraintStart_toStartOf="@+id/SLConfirmCodeEt"
+                    app:layout_constraintTop_toBottomOf="@+id/SLConfirmCodeEt"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <ProgressBar
+                    android:id="@+id/SLConfirmCodeLoading"
+                    android:theme="@style/LightProgressBarTheme"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/SLConfirmCodeDarkBt"
+                    app:layout_constraintEnd_toEndOf="@+id/SLConfirmCodeDarkBt"
+                    app:layout_constraintStart_toStartOf="@+id/SLConfirmCodeDarkBt"
+                    app:layout_constraintTop_toTopOf="@+id/SLConfirmCodeDarkBt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

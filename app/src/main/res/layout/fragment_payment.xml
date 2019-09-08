@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="PaymentsBinding">
+        <variable
+            name="VM"
+            type="ir.pitok.cafe.viewModels.PaymentsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/PFToolbar"
+            layout="@layout/item_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/PFShadow"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:src="@drawable/toolbar_shadow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PFToolbar"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/PFAmounntsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rc_top_round_transparent75_green"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PFToolbar">
+
+            <TextView
+                android:id="@+id/PFAmountSumLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/is_bold"
+                android:text="@string/sum_of_amounts_colon"
+                android:textColor="@color/colorTextIcon"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <TextView
+                android:id="@+id/PFAmountSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/is"
+                android:textColor="@color/colorTextIcon"
+                android:layout_marginRight="8dp"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/PFAmountSumLable"
+                app:layout_constraintEnd_toStartOf="@+id/PFAmountSumLable"
+                app:layout_constraintTop_toTopOf="@+id/PFAmountSumLable"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <ProgressBar
+                android:id="@+id/PFAmountSumPb"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="16dp"
+                android:theme="@style/LightProgressBarTheme"
+                app:layout_constraintBottom_toBottomOf="@+id/PFAmountSumLable"
+                app:layout_constraintEnd_toStartOf="@+id/PFAmountSumLable"
+                app:layout_constraintTop_toTopOf="@+id/PFAmountSumLable"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/PFDiscountAmountLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/is_bold"
+                android:text="@string/discount_colon"
+                android:textColor="@color/colorTextIcon"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/PFAmountSum"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <TextView
+                android:id="@+id/PFDiscountAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/is"
+                android:textColor="@color/colorTextIcon"
+                android:layout_marginRight="8dp"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/PFDiscountAmountLable"
+                app:layout_constraintEnd_toStartOf="@+id/PFDiscountAmountLable"
+                app:layout_constraintTop_toTopOf="@+id/PFDiscountAmountLable"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <ProgressBar
+                android:id="@+id/PFDiscountAmountPb"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="16dp"
+                android:theme="@style/LightProgressBarTheme"
+                app:layout_constraintBottom_toBottomOf="@+id/PFDiscountAmountLable"
+                app:layout_constraintEnd_toStartOf="@+id/PFDiscountAmountLable"
+                app:layout_constraintTop_toTopOf="@+id/PFDiscountAmountLable"
+                tools:ignore="RtlHardcoded" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/PFTotalAmountContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rc_transparent75_green"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PFAmounntsContainer">
+
+            <TextView
+                android:id="@+id/PFTotalAmountLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/is_bold"
+                android:text="@string/sum_of_amounts_for_pay_colon"
+                android:textColor="@color/colorTextIcon"
+                android:textSize="13dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <TextView
+                android:id="@+id/PFTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/is"
+                android:textColor="@color/colorTextIcon"
+                android:layout_marginRight="8dp"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/PFTotalAmountLable"
+                app:layout_constraintEnd_toStartOf="@+id/PFTotalAmountLable"
+                app:layout_constraintTop_toTopOf="@+id/PFTotalAmountLable"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <ProgressBar
+                android:id="@+id/PFTotalAmountPb"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="16dp"
+                android:theme="@style/LightProgressBarTheme"
+                app:layout_constraintBottom_toBottomOf="@+id/PFTotalAmountLable"
+                app:layout_constraintEnd_toStartOf="@+id/PFTotalAmountLable"
+                app:layout_constraintTop_toTopOf="@+id/PFTotalAmountLable"
+                tools:ignore="RtlHardcoded" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/PFDiscountCodeContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rc_bottom_round_transparent75_green"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PFTotalAmountContainer">
+
+            <EditText
+                android:id="@+id/PFDiscountEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/rc_round_transparent50_white"
+                android:fontFamily="@font/is"
+                android:hint="@string/discount_code"
+                android:minHeight="40dp"
+                android:padding="8dp"
+                android:textColor="@color/colorSecondaryText"
+                android:textColorHint="@color/colorSecondaryText"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/PFUseDiscount"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill,SpUsage,TextFields" />
+
+            <Button
+                android:id="@+id/PFUseDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/rc_st_round_white"
+                android:fontFamily="@font/is"
+                android:text="@string/use"
+                android:textColor="@color/colorTextIcon"
+                android:textSize="14dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/PFDiscountEt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/PFDiscountEt"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/PFPayBt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rc_full_round_green"
+            android:text="@string/pay"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/is"
+            android:textColor="@color/colorTextIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PFDiscountCodeContainer" />
+
+        <ProgressBar
+            android:id="@+id/PFPayLoading"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="invisible"
+            android:theme="@style/LightProgressBarTheme"
+            app:layout_constraintBottom_toBottomOf="@+id/PFPayBt"
+            app:layout_constraintEnd_toEndOf="@+id/PFPayBt"
+            app:layout_constraintStart_toStartOf="@+id/PFPayBt"
+            app:layout_constraintTop_toTopOf="@+id/PFPayBt"
+            tools:ignore="RtlHardcoded" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

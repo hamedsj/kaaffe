@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ChoosedOrdersBinding">
+        <variable
+            name="VM"
+            type="ir.pitok.cafe.viewModels.ChoosedOrdersViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/COFToolbar"
+            layout="@layout/item_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/COFShadow"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:src="@drawable/toolbar_shadow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/COFToolbar"
+            tools:ignore="ContentDescription" />
+
+
+        <ProgressBar
+            android:id="@+id/COFLoading"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:background="@drawable/circle_brown"
+            android:visibility="invisible"
+            android:padding="4dp"
+            android:theme="@style/LightProgressBarTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/COFOrdersRv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/COFOkOrders"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/COFToolbar"
+            tools:itemCount="8"
+            tools:listitem="@layout/item_choosed_order" />
+
+        <ImageView
+            android:id="@+id/COFShadowDown"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:src="@drawable/bottom_shadow"
+            app:layout_constraintBottom_toTopOf="@+id/COFOkOrders"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/COFOkOrders"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_green_dark"
+            android:fontFamily="@font/is"
+            android:text="@string/ok_orders"
+            android:textColor="@color/colorTextIcon"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SpUsage" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

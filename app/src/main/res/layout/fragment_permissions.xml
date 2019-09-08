@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data class="PermissionsBinding">
+        <variable
+            name="PermissionVm"
+            type="ir.pitok.cafe.viewModels.PermissionsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/PRLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/circle_white"
+            android:padding="10dp"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/PRAllowText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/PRAllowText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/is"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/permission_text"
+            android:textColor="@color/colorTextIcon"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/PRAllowBt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PRLogo"
+            tools:ignore="SpUsage" />
+
+        <Button
+            android:id="@+id/PRAllowBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rc_round_white"
+            android:fontFamily="@font/is_bold"
+            android:text="@string/i_allowed"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PRAllowText"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,29 @@
+<resources>
+
+    <style name="CoffeeStyle"
+        parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+    <style name="LightProgressBarTheme"
+        parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/colorTextIcon</item>
+    </style>
+    <style name="BrownProgressBarTheme"
+        parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_top_rounded_white_bg</item>
+    </style>
+
+</resources>

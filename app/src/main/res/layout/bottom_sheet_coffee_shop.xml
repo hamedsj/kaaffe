@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout 
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="VM"
+            type="ir.pitok.cafe.viewModels.MapViewModel" />
+    </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/CSBSRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:background="@drawable/rc_top_round16_brown"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/CSBSScrollView"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/CSBSMainPicture"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:minHeight="200dp"
+                        android:src="@drawable/radio_cafe"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:riv_corner_radius="16dp"
+                        app:riv_corner_radius_top_left="16dp"
+                        app:riv_corner_radius_top_right="16dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/CSBSDetailsLable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="16dp"
+                        android:fontFamily="@font/is_bold"
+                        android:text="@string/details"
+                        android:textColor="@color/colorTextIcon"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/CSBSMainPicture"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/CSBSOrdersBg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rc_st_full_round_white"
+                        android:paddingRight="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:layout_marginLeft="24dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/CSBSDetailsLable"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/CSBSDetailsLable">
+
+                        <ImageView
+                            android:id="@+id/CSBSBasketIc"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/basket"
+                            android:tint="@color/colorTextIcon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/CSBSOrders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:fontFamily="@font/is"
+                            android:textSize="12dp"
+                            android:text="@{VM.shop_orders}"
+                            android:textColor="@color/colorTextIcon"
+                            app:layout_constraintBottom_toBottomOf="@+id/CSBSBasketIc"
+                            app:layout_constraintEnd_toStartOf="@+id/CSBSBasketIc"
+                            app:layout_constraintRight_toLeftOf="@+id/CSBSBasketIc"
+                            app:layout_constraintTop_toTopOf="@+id/CSBSBasketIc"
+                            tools:ignore="RtlHardcoded,SpUsage" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/CSBSDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:fontFamily="@font/is"
+                        android:text="@{VM.shop_details}"
+                        android:textColor="@color/colorTextIcon"
+                        android:textSize="13dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/CSBSDetailsLable"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/CSBSOrdersBg"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+
+                    <TextView
+                        android:id="@+id/CSBSWorkTimeLable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/is_medium"
+                        android:text="@string/work_time_colon"
+                        android:textColor="@color/colorTextIcon"
+                        android:textSize="13dp"
+                        app:layout_constraintEnd_toEndOf="@+id/CSBSDetails"
+                        app:layout_constraintTop_toBottomOf="@+id/CSBSDetails"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/CSBSWorkTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/is"
+                        android:gravity="right"
+                        android:text="@{VM.shop_workTime}"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="@color/colorTextIcon"
+                        android:textSize="13dp"
+                        app:layout_constraintEnd_toStartOf="@+id/CSBSWorkTimeLable"
+                        app:layout_constraintStart_toStartOf="@+id/CSBSDetails"
+                        app:layout_constraintTop_toTopOf="@+id/CSBSWorkTimeLable"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+
+                    <TextView
+                        android:id="@+id/CSBSMorePicturesLable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/is_medium"
+                        android:text="@string/more_pictures"
+                        android:textColor="@color/colorTextIcon"
+                        android:textSize="14dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/CSBSWorkTime"
+                        tools:ignore="SpUsage" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/CSBSMorePictures"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="56dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/CSBSMorePicturesLable"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_more_pictures" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <include android:id="@+id/CSBSShowMenuButtomSheet" layout="@layout/bottom_sheet_show_menu"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

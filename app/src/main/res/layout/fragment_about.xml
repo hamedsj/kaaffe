@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="AboutBinding">
+        <variable
+            name="VM"
+            type="ir.pitok.cafe.viewModels.AboutViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/ABBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/back"
+            android:tint="@color/colorTextIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/PRLogo"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/circle_white"
+            android:padding="10dp"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/ABButtons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ABButtons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PRLogo">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ABInsta"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/colorTextIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ABInstaIc"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/instagram"
+                        android:tint="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/is_bold"
+                        android:text="@string/cafe_instagram"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="13dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ABInstaIc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/ABInstaIc"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ABTelegram"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                app:cardBackgroundColor="@color/colorTextIcon"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ABInsta">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ABTelegramIc"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/telegram"
+                        android:tint="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/is_bold"
+                        android:text="@string/cafe_telegram"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="13dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ABTelegramIc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/ABTelegramIc"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/is_bold"
+            android:layout_marginBottom="16dp"
+            android:text="@string/hoquq"
+            android:textColor="@color/colorTextIcon"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SpUsage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

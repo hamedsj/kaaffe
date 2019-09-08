@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="ShopMenuItemBinding">
+        <variable
+            name="VM"
+            type="ir.pitok.cafe.viewModels.MapViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/colorTextIcon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/IMName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="4dp"
+                    android:fontFamily="@font/is"
+                    android:gravity="right"
+                    android:text="@{VM.menu_name}"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IMImage"
+                    app:layout_constraintStart_toStartOf="@+id/IMImage"
+                    app:layout_constraintTop_toBottomOf="@+id/IMImage"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/IMAddBg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rc_bottom_round_green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/IMName">
+
+                    <ImageView
+                        android:id="@+id/IMAdd"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="4dp"
+                        android:padding="2dp"
+                        android:src="@drawable/add"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/is"
+                        android:text="@{VM.menu_price}"
+                        android:textColor="@color/colorTextIcon"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/IMAdd"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/IMImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:riv_corner_radius_top_left="8dp"
+                    app:riv_corner_radius_top_right="8dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

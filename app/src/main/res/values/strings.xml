@@ -1,0 +1,56 @@
+<resources>
+    <string name="google_maps_key">AIzaSyDoSBphpoZf4zjwS2dCVmgq16MAdgTmJ6s</string>
+    <string name="app_name">Kaaffe</string>
+    <string name="cafe">کافه</string>
+    <string name="username">نام کاربری</string>
+    <string name="email">ایمیل</string>
+    <string name="phone_number">شماره همراه</string>
+    <string name="password">رمز عبور</string>
+    <string name="retype_password">تایید رمز عبور</string>
+    <string name="signup">ثبت نام</string>
+    <string name="login">ورود</string>
+    <string name="login_with_google">ورود با حساب گوگل</string>
+    <string name="forget_password">رمز عبور را فراموش کردم</string>
+    <string name="send_confirm_code">ارسال کد تایید</string>
+    <string name="username_or_phone_number">نام کاربری یا شماره همراه</string>
+    <string name="confirm_code">کد تایید</string>
+    <string name="recovery_password">بازیابی رمز عبور</string>
+    <string name="i_allowed">اجازه دادم</string>
+    <string name="permission_text">اپلیکیشن کافه برای ادامه فعالیتش نیاز به چند تا مجوز داره\nلطفا اجازه دسترسی به حافظه و موقعیت مکانی رو بهش بده</string>
+    <string name="presian_app_name">کافه</string>
+    <string name="search">جستجو</string>
+    <string name="search_results">نتایج جستجو</string>
+    <string name="details">جزئیات</string>
+    <string name="temp">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون.</string>
+    <string name="work_time_colon">ساعت کاری :</string>
+    <string name="more_pictures">تصاویر بیش تر</string>
+    <string name="close">بستن</string>
+    <string name="see_menu">مشاهده منو</string>
+    <string name="profile">پروفایل</string>
+    <string name="payments">پرداخت ها</string>
+    <string name="messages">پیام ها</string>
+    <string name="about_cafe">درباره کافه</string>
+    <string name="exit">خروج</string>
+    <string name="orders">سفارش ها</string>
+    <string name="orders_colon">سفارش ها :</string>
+    <string name="ok_orders">تایید سفارشات</string>
+    <string name="sum_of_amounts_colon">جمع هزینه ها :</string>
+    <string name="discount_colon">تخفیف :</string>
+    <string name="sum_of_amounts_for_pay_colon">جمع پرداختی ها</string>
+    <string name="discount_code">کد تخفیف</string>
+    <string name="use">اعمال</string>
+    <string name="pay">پرداخت</string>
+    <string name="payment">پرداخت</string>
+    <string name="paid">پرداخت شده</string>
+    <string name="location_colon">محل :</string>
+    <string name="amount_colon">هزینه :</string>
+    <string name="count_colon">تعداد اقلام :</string>
+    <string name="more_details">جزئیات بیش تر</string>
+    <string name="cafe_instagram">اینستاگرام کافه</string>
+    <string name="cafe_telegram">تلگرام کافه</string>
+    <string name="hoquq">کلیه حقوق این اپلیکیشن مربوط به سایت کافه می باشد</string>
+    <string name="edit">ویرایش</string>
+    <string name="edit_profile">ویرایش پروفایل</string>
+
+
+</resources>

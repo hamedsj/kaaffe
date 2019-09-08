@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="DrawerBinding">
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/drawer_width"
+        android:layout_height="match_parent"
+        android:background="@color/colorTextIcon"
+        android:id="@+id/NDRoot"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:id="@+id/NDHeader"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/circle_white"
+                android:padding="12.5dp"
+                android:src="@drawable/logo"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/NDProfile"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/NDHeader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/NDProfileIc"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/profile"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/NDProfileTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/is"
+                android:singleLine="true"
+                android:text="@string/profile"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="14dp"
+                android:layout_marginRight="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/NDProfileIc"
+                app:layout_constraintEnd_toStartOf="@+id/NDProfileIc"
+                app:layout_constraintTop_toTopOf="@+id/NDProfileIc"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:src="@drawable/line"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/NDOrders"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/NDProfile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/NDOrderIc"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/orders"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/NDOrderTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/is"
+                android:singleLine="true"
+                android:text="@string/orders"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="14dp"
+                android:layout_marginRight="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/NDOrderIc"
+                app:layout_constraintEnd_toStartOf="@+id/NDOrderIc"
+                app:layout_constraintTop_toTopOf="@+id/NDOrderIc"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:src="@drawable/line"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/NDPayments"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/NDOrders"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/NDPaymentsIc"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/payment"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/NDPaymentsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/is"
+                android:singleLine="true"
+                android:text="@string/payments"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="14dp"
+                android:layout_marginRight="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/NDPaymentsIc"
+                app:layout_constraintEnd_toStartOf="@+id/NDPaymentsIc"
+                app:layout_constraintTop_toTopOf="@+id/NDPaymentsIc"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:src="@drawable/line"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/NDMessages"
+            app:layout_constraintTop_toBottomOf="@+id/NDPayments"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/NDMessagesIc"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/messages"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/NDMessagesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/is"
+                android:singleLine="true"
+                android:text="@string/messages"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="14dp"
+                android:layout_marginRight="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/NDMessagesIc"
+                app:layout_constraintEnd_toStartOf="@+id/NDMessagesIc"
+                app:layout_constraintTop_toTopOf="@+id/NDMessagesIc"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:src="@drawable/line"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/NDAbout"
+            app:layout_constraintTop_toBottomOf="@+id/NDMessages"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/NDAboutIc"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/about"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/NDAboutTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/is"
+                android:singleLine="true"
+                android:text="@string/about_cafe"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="14dp"
+                android:layout_marginRight="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/NDAboutIc"
+                app:layout_constraintEnd_toStartOf="@+id/NDAboutIc"
+                app:layout_constraintTop_toTopOf="@+id/NDAboutIc"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:src="@drawable/line"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/NDExit"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/NDAbout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/NDExitIc"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/exit"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/NDExitTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/is"
+                android:singleLine="true"
+                android:text="@string/exit"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="14dp"
+                android:layout_marginRight="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/NDExitIc"
+                app:layout_constraintEnd_toStartOf="@+id/NDExitIc"
+                app:layout_constraintTop_toTopOf="@+id/NDExitIc"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

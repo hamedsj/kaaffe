@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="signup_fragment_anim_duration">500</integer>
+    <integer name="shake_duration">250</integer>
+    <dimen name="drawer_width">250dp</dimen>
+
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="SearchResultBinding">
+        <variable
+            name="SearchResultVM"
+            type="ir.pitok.cafe.viewModels.SearchViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        >
+
+        <ImageView
+            android:id="@+id/SRIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/place"
+            android:tint="@color/colorSecondaryText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/SRName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/is_bold"
+            android:singleLine="true"
+            android:text="@{SearchResultVM.name}"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/SRIcon"
+            app:layout_constraintEnd_toStartOf="@+id/SRIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/SRIcon"
+            tools:ignore="RtlHardcoded,SpUsage" />
+
+
+        <TextView
+            android:id="@+id/SRAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/is"
+            android:singleLine="true"
+            android:layout_marginTop="8dp"
+            android:text="@{SearchResultVM.address}"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="@+id/SRName"
+            app:layout_constraintStart_toStartOf="@+id/SRName"
+            app:layout_constraintTop_toBottomOf="@+id/SRName"
+            tools:ignore="SpUsage" />
+
+        <ImageView
+            android:id="@+id/SRLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/line"
+            android:layout_marginTop="8dp"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/SRIcon"
+            app:layout_constraintStart_toStartOf="@+id/SRName"
+            app:layout_constraintTop_toBottomOf="@+id/SRAddress"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

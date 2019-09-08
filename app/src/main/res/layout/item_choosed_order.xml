@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="ItemChoosedOrderBinding">
+        <variable
+            name="VM"
+            type="ir.pitok.cafe.viewModels.ChoosedOrdersViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ICODivider"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/ICOPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/is"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toTopOf="@+id/ICOCount"
+            app:layout_constraintEnd_toStartOf="@+id/ICOPicture"
+            app:layout_constraintTop_toBottomOf="@+id/ICOName"
+            tools:ignore="RtlHardcoded,SpUsage" />
+
+
+        <TextView
+            android:id="@+id/ICOCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rc_full_round_green"
+            android:fontFamily="@font/is"
+            android:paddingLeft="8dp"
+            android:paddingTop="2dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="2dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/colorTextIcon"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ICOPicture"
+            app:layout_constraintTop_toBottomOf="@+id/ICOPrice"
+            tools:ignore="RtlHardcoded,SpUsage" />
+
+        <TextView
+            android:id="@+id/ICOName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/is"
+            android:gravity="right"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toTopOf="@+id/ICOPrice"
+            app:layout_constraintEnd_toStartOf="@+id/ICOPicture"
+            app:layout_constraintStart_toEndOf="@+id/ICODelete"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded,SpUsage" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ICOPicture"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="8dp"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/ICODelete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="3dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:rotation="45"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/add_circle"
+            android:tint="@color/material_red_800"
+            app:layout_constraintBottom_toBottomOf="@+id/ICOName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ICOName"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
