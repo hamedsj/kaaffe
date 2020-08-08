@@ -14,14 +14,11 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import ir.pitok.cafe.R;
-import ir.pitok.cafe.databinding.ShopPictureBinding;
 import ir.pitok.cafe.databinding.ShowPictureBinding;
-import ir.pitok.cafe.viewModels.MapViewModel;
 import ir.pitok.cafe.viewModels.ShowPictureViewModel;
-import ir.pitok.cafe.viewModels.ShowShopPhotoViewModel;
 import ir.pitok.cafe.views.Interfaces.RecyclerViewClickListener;
 
-import static ir.pitok.cafe.utility.CafeUtilities.dp2Px;
+import static ir.pitok.cafe.utils.CafeUtilities.dp2Px;
 
 public class ShowPicturesAdapter extends RecyclerView.Adapter<ShowPicturesAdapter.rowViewHolder> {
 

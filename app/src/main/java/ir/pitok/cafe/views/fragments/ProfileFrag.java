@@ -18,20 +18,20 @@ import com.daimajia.androidanimations.library.YoYo;
 
 import ir.pitok.cafe.R;
 import ir.pitok.cafe.databinding.ProfileBinding;
-import ir.pitok.cafe.models.responseModels.MessageModel;
-import ir.pitok.cafe.models.responseModels.ProfileModel;
-import ir.pitok.cafe.repositories.Requests;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.models.pojo.MessageModel;
+import ir.pitok.cafe.models.pojo.ProfileModel;
+import ir.pitok.cafe.models.repositories.Requests;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.viewModels.ProfileViewModel;
 import ir.pitok.cafe.views.Interfaces.BackCallListener;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static ir.pitok.cafe.utility.CafeUtilities.dp2Px;
-import static ir.pitok.cafe.utility.CafeUtilities.getApiToken;
-import static ir.pitok.cafe.utility.CafeUtilities.handleFailor;
-import static ir.pitok.cafe.utility.CafeUtilities.isValidUsername;
+import static ir.pitok.cafe.utils.CafeUtilities.dp2Px;
+import static ir.pitok.cafe.utils.CafeUtilities.getApiToken;
+import static ir.pitok.cafe.utils.CafeUtilities.handleFailor;
+import static ir.pitok.cafe.utils.CafeUtilities.isValidUsername;
 
 public class ProfileFrag extends CafeFragment {
 

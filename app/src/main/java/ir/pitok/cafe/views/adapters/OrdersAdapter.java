@@ -17,7 +17,7 @@ import ir.pitok.cafe.databinding.ItemOrderBinding;
 import ir.pitok.cafe.viewModels.OrdersViewModel;
 import ir.pitok.cafe.views.Interfaces.RecyclerViewClickListener;
 
-import static ir.pitok.cafe.utility.CafeUtilities.en2prText;
+import static ir.pitok.cafe.utils.CafeUtilities.en2prText;
 
 public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.rowViewHolder> {
 

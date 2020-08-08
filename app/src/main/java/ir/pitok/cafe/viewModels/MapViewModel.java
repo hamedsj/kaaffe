@@ -17,9 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ir.pitok.cafe.R;
-import ir.pitok.cafe.BR;
 
-import static ir.pitok.cafe.utility.CafeUtilities.getCornerFromOffset;
+import static ir.pitok.cafe.utils.CafeUtilities.getCornerFromOffset;
 
 public class MapViewModel extends BaseObservable {
 

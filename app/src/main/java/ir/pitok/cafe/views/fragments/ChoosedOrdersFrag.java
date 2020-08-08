@@ -18,10 +18,10 @@ import java.util.List;
 
 import ir.pitok.cafe.R;
 import ir.pitok.cafe.databinding.ChoosedOrdersBinding;
-import ir.pitok.cafe.repositories.Requests;
-import ir.pitok.cafe.models.responseModels.ChoosedOrdersModel;
-import ir.pitok.cafe.models.responseModels.dataModels.ChoosedOrdersItemDataModel;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.models.repositories.Requests;
+import ir.pitok.cafe.models.pojo.ChoosedOrdersModel;
+import ir.pitok.cafe.models.pojo.dataModels.ChoosedOrdersItemDataModel;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.viewModels.ChoosedOrdersViewModel;
 
 import ir.pitok.cafe.views.Interfaces.DeleteListener;
@@ -33,10 +33,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static ir.pitok.cafe.utility.CafeUtilities.ItemsIdListToJsonArray;
-import static ir.pitok.cafe.utility.CafeUtilities.dp2Px;
-import static ir.pitok.cafe.utility.CafeUtilities.getApiToken;
-import static ir.pitok.cafe.utility.CafeUtilities.handleFailor;
+import static ir.pitok.cafe.utils.CafeUtilities.ItemsIdListToJsonArray;
+import static ir.pitok.cafe.utils.CafeUtilities.dp2Px;
+import static ir.pitok.cafe.utils.CafeUtilities.getApiToken;
+import static ir.pitok.cafe.utils.CafeUtilities.handleFailor;
 
 public class ChoosedOrdersFrag extends CafeFragment {
 

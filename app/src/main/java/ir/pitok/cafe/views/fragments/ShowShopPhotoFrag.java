@@ -23,7 +23,7 @@ import java.util.List;
 
 import ir.pitok.cafe.R;
 import ir.pitok.cafe.databinding.ShowShopPhotoBinding;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.viewModels.ShowPictureViewModel;
 import ir.pitok.cafe.views.Interfaces.BackCallListener;
 import ir.pitok.cafe.views.Interfaces.RecyclerViewClickListener;

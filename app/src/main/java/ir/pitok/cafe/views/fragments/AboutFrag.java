@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,15 +14,9 @@ import androidx.databinding.DataBindingUtil;
 
 import ir.pitok.cafe.R;
 import ir.pitok.cafe.databinding.AboutBinding;
-import ir.pitok.cafe.databinding.PermissionsBinding;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.viewModels.AboutViewModel;
-import ir.pitok.cafe.viewModels.PermissionsViewModel;
 import ir.pitok.cafe.views.Interfaces.BackCallListener;
-import ir.pitok.cafe.views.Interfaces.LoadMapFragmentListener;
-
-import static ir.pitok.cafe.utility.CafeUtilities.checkPermissions;
-import static ir.pitok.cafe.utility.CafeUtilities.getPermissions;
 
 public class AboutFrag extends CafeFragment {
 

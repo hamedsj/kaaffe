@@ -19,7 +19,7 @@ import ir.pitok.cafe.viewModels.ChoosedOrdersViewModel;
 import ir.pitok.cafe.views.Interfaces.DeleteListener;
 import ir.pitok.cafe.views.Interfaces.RecyclerViewClickListener;
 
-import static ir.pitok.cafe.utility.CafeUtilities.en2prText;
+import static ir.pitok.cafe.utils.CafeUtilities.en2prText;
 
 public class ChoosedOrdersAdapter extends RecyclerView.Adapter<ChoosedOrdersAdapter.rowViewHolder> {
 

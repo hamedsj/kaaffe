@@ -27,28 +27,28 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 import ir.pitok.cafe.R;
-import ir.pitok.cafe.models.responseModels.LoginWithGoogleModel;
-import ir.pitok.cafe.utility.CafeUtilities;
+import ir.pitok.cafe.models.pojo.LoginWithGoogleModel;
+import ir.pitok.cafe.utils.CafeUtilities;
 import ir.pitok.cafe.databinding.SignUpLoginBinding;
-import ir.pitok.cafe.repositories.Requests;
-import ir.pitok.cafe.models.responseModels.ConfirmCodeModel;
-import ir.pitok.cafe.models.responseModels.LoginModel;
-import ir.pitok.cafe.models.responseModels.MessageModel;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.models.repositories.Requests;
+import ir.pitok.cafe.models.pojo.ConfirmCodeModel;
+import ir.pitok.cafe.models.pojo.LoginModel;
+import ir.pitok.cafe.models.pojo.MessageModel;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.viewModels.SignUpLoginViewModel;
 import ir.pitok.cafe.views.Interfaces.LoadMapFragmentListener;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static ir.pitok.cafe.utility.CafeUtilities.apiTokenExist;
-import static ir.pitok.cafe.utility.CafeUtilities.en2prText;
-import static ir.pitok.cafe.utility.CafeUtilities.getAgent;
-import static ir.pitok.cafe.utility.CafeUtilities.getFcmToken;
-import static ir.pitok.cafe.utility.CafeUtilities.googleSignInRequestCode;
-import static ir.pitok.cafe.utility.CafeUtilities.handleFailor;
-import static ir.pitok.cafe.utility.CafeUtilities.hashPassword;
-import static ir.pitok.cafe.utility.CafeUtilities.setApiToken;
+import static ir.pitok.cafe.utils.CafeUtilities.apiTokenExist;
+import static ir.pitok.cafe.utils.CafeUtilities.en2prText;
+import static ir.pitok.cafe.utils.CafeUtilities.getAgent;
+import static ir.pitok.cafe.utils.CafeUtilities.getFcmToken;
+import static ir.pitok.cafe.utils.CafeUtilities.googleSignInRequestCode;
+import static ir.pitok.cafe.utils.CafeUtilities.handleFailor;
+import static ir.pitok.cafe.utils.CafeUtilities.hashPassword;
+import static ir.pitok.cafe.utils.CafeUtilities.setApiToken;
 
 public class SignUpLoginFrag extends CafeFragment {
 

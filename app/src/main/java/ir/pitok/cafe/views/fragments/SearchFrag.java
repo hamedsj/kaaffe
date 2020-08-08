@@ -20,10 +20,10 @@ import java.util.List;
 
 import ir.pitok.cafe.R;
 import ir.pitok.cafe.databinding.SearchBinding;
-import ir.pitok.cafe.repositories.Requests;
-import ir.pitok.cafe.models.responseModels.SearchModel;
-import ir.pitok.cafe.models.responseModels.dataModels.SearchResultItemDataModel;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.models.repositories.Requests;
+import ir.pitok.cafe.models.pojo.SearchModel;
+import ir.pitok.cafe.models.pojo.dataModels.SearchResultItemDataModel;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.viewModels.SearchViewModel;
 import ir.pitok.cafe.views.Interfaces.LoadMapFragmentInLatLngListener;
 import ir.pitok.cafe.views.Interfaces.LoadMapFragmentListener;
@@ -34,8 +34,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static ir.pitok.cafe.utility.CafeUtilities.getApiToken;
-import static ir.pitok.cafe.utility.CafeUtilities.handleFailor;
+import static ir.pitok.cafe.utils.CafeUtilities.getApiToken;
+import static ir.pitok.cafe.utils.CafeUtilities.handleFailor;
 
 public class SearchFrag extends CafeFragment{
 

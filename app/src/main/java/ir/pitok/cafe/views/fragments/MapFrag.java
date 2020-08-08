@@ -41,13 +41,13 @@ import java.util.List;
 
 import ir.pitok.cafe.R;
 import ir.pitok.cafe.databinding.MapBinding;
-import ir.pitok.cafe.repositories.Requests;
-import ir.pitok.cafe.models.responseModels.dataModels.ItemShopMenuDataModel;
-import ir.pitok.cafe.models.responseModels.dataModels.NearbyShopsItemDataModel;
-import ir.pitok.cafe.models.responseModels.NearbyShopsModel;
-import ir.pitok.cafe.models.responseModels.ShopDetailModel;
-import ir.pitok.cafe.models.responseModels.ShopPicturesItemModel;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.models.repositories.Requests;
+import ir.pitok.cafe.models.pojo.dataModels.ItemShopMenuDataModel;
+import ir.pitok.cafe.models.pojo.dataModels.NearbyShopsItemDataModel;
+import ir.pitok.cafe.models.pojo.NearbyShopsModel;
+import ir.pitok.cafe.models.pojo.ShopDetailModel;
+import ir.pitok.cafe.models.pojo.ShopPicturesItemModel;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.viewModels.MapViewModel;
 import ir.pitok.cafe.viewModels.ShowPictureViewModel;
 import ir.pitok.cafe.views.Interfaces.LoadAboutFragmentListener;
@@ -64,14 +64,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static ir.pitok.cafe.utility.CafeUtilities.dp2Px;
-import static ir.pitok.cafe.utility.CafeUtilities.en2prText;
-import static ir.pitok.cafe.utility.CafeUtilities.getApiToken;
-import static ir.pitok.cafe.utility.CafeUtilities.getLastLocation;
-import static ir.pitok.cafe.utility.CafeUtilities.getStandardUrl;
-import static ir.pitok.cafe.utility.CafeUtilities.handleFailor;
-import static ir.pitok.cafe.utility.CafeUtilities.isUrlValid;
-import static ir.pitok.cafe.utility.CafeUtilities.setLastLocation;
+import static ir.pitok.cafe.utils.CafeUtilities.dp2Px;
+import static ir.pitok.cafe.utils.CafeUtilities.en2prText;
+import static ir.pitok.cafe.utils.CafeUtilities.getApiToken;
+import static ir.pitok.cafe.utils.CafeUtilities.getLastLocation;
+import static ir.pitok.cafe.utils.CafeUtilities.getStandardUrl;
+import static ir.pitok.cafe.utils.CafeUtilities.handleFailor;
+import static ir.pitok.cafe.utils.CafeUtilities.isUrlValid;
+import static ir.pitok.cafe.utils.CafeUtilities.setLastLocation;
 
 public class MapFrag extends CafeFragment implements OnMapReadyCallback {
 

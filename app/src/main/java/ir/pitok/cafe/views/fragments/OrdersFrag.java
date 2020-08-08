@@ -17,10 +17,10 @@ import java.util.List;
 
 import ir.pitok.cafe.R;
 import ir.pitok.cafe.databinding.OrdersBinding;
-import ir.pitok.cafe.repositories.Requests;
-import ir.pitok.cafe.models.responseModels.OrdersModel;
-import ir.pitok.cafe.models.responseModels.dataModels.OrdersItemDataModel;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.models.repositories.Requests;
+import ir.pitok.cafe.models.pojo.OrdersModel;
+import ir.pitok.cafe.models.pojo.dataModels.OrdersItemDataModel;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.viewModels.OrdersViewModel;
 import ir.pitok.cafe.views.Interfaces.BackCallListener;
 import ir.pitok.cafe.views.Interfaces.RecyclerViewClickListener;
@@ -29,9 +29,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static ir.pitok.cafe.utility.CafeUtilities.dp2Px;
-import static ir.pitok.cafe.utility.CafeUtilities.getApiToken;
-import static ir.pitok.cafe.utility.CafeUtilities.handleFailor;
+import static ir.pitok.cafe.utils.CafeUtilities.dp2Px;
+import static ir.pitok.cafe.utils.CafeUtilities.getApiToken;
+import static ir.pitok.cafe.utils.CafeUtilities.handleFailor;
 
 public class OrdersFrag extends CafeFragment {
 

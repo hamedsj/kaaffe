@@ -11,12 +11,12 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import ir.pitok.cafe.R;
 import ir.pitok.cafe.databinding.PermissionsBinding;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.viewModels.PermissionsViewModel;
 import ir.pitok.cafe.views.Interfaces.LoadMapFragmentListener;
 
-import static ir.pitok.cafe.utility.CafeUtilities.checkPermissions;
-import static ir.pitok.cafe.utility.CafeUtilities.getPermissions;
+import static ir.pitok.cafe.utils.CafeUtilities.checkPermissions;
+import static ir.pitok.cafe.utils.CafeUtilities.getPermissions;
 
 public class PermissionsFrag extends CafeFragment {
 

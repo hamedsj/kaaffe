@@ -18,7 +18,7 @@ import ir.pitok.cafe.databinding.ShopPictureBinding;
 import ir.pitok.cafe.viewModels.MapViewModel;
 import ir.pitok.cafe.views.Interfaces.RecyclerViewClickListener;
 
-import static ir.pitok.cafe.utility.CafeUtilities.dp2Px;
+import static ir.pitok.cafe.utils.CafeUtilities.dp2Px;
 
 public class ShopPicturesAdapter extends RecyclerView.Adapter<ShopPicturesAdapter.rowViewHolder> {
 

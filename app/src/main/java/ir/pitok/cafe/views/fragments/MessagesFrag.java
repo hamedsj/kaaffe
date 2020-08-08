@@ -19,10 +19,10 @@ import java.util.List;
 
 import ir.pitok.cafe.R;
 import ir.pitok.cafe.databinding.MessagesBinding;
-import ir.pitok.cafe.repositories.Requests;
-import ir.pitok.cafe.models.responseModels.MessagesModel;
-import ir.pitok.cafe.models.responseModels.dataModels.MessagesItemDataModel;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.models.repositories.Requests;
+import ir.pitok.cafe.models.pojo.MessagesModel;
+import ir.pitok.cafe.models.pojo.dataModels.MessagesItemDataModel;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.viewModels.MessagesViewModel;
 import ir.pitok.cafe.views.Interfaces.BackCallListener;
 import ir.pitok.cafe.views.Interfaces.RecyclerViewClickListener;
@@ -31,10 +31,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static ir.pitok.cafe.utility.CafeUtilities.dp2Px;
-import static ir.pitok.cafe.utility.CafeUtilities.getApiToken;
-import static ir.pitok.cafe.utility.CafeUtilities.getStandardUrl;
-import static ir.pitok.cafe.utility.CafeUtilities.handleFailor;
+import static ir.pitok.cafe.utils.CafeUtilities.dp2Px;
+import static ir.pitok.cafe.utils.CafeUtilities.getApiToken;
+import static ir.pitok.cafe.utils.CafeUtilities.getStandardUrl;
+import static ir.pitok.cafe.utils.CafeUtilities.handleFailor;
 
 public class MessagesFrag extends CafeFragment {
 

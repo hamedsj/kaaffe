@@ -14,7 +14,7 @@ import androidx.databinding.DataBindingUtil;
 
 import ir.pitok.cafe.R;
 import ir.pitok.cafe.databinding.DrawerBinding;
-import ir.pitok.cafe.utility.customs.CafeFragment;
+import ir.pitok.cafe.utils.customs.CafeFragment;
 import ir.pitok.cafe.views.Interfaces.LoadAboutFragmentListener;
 import ir.pitok.cafe.views.Interfaces.LoadMessagesFragmentListener;
 import ir.pitok.cafe.views.Interfaces.LoadOrdersFragmentListener;

@@ -16,7 +16,7 @@ import ir.pitok.cafe.databinding.ItemMessageBinding;
 import ir.pitok.cafe.viewModels.MessagesViewModel;
 import ir.pitok.cafe.views.Interfaces.RecyclerViewClickListener;
 
-import static ir.pitok.cafe.utility.CafeUtilities.en2prText;
+import static ir.pitok.cafe.utils.CafeUtilities.en2prText;
 
 public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.rowViewHolder> {
 

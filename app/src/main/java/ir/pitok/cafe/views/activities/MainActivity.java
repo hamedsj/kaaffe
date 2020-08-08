@@ -40,8 +40,8 @@ import ir.pitok.cafe.views.fragments.SearchFrag;
 import ir.pitok.cafe.views.fragments.ShowShopPhotoFrag;
 import ir.pitok.cafe.views.fragments.SignUpLoginFrag;
 
-import static ir.pitok.cafe.utility.CafeUtilities.changeLocale;
-import static ir.pitok.cafe.utility.CafeUtilities.checkPermissions;
+import static ir.pitok.cafe.utils.CafeUtilities.changeLocale;
+import static ir.pitok.cafe.utils.CafeUtilities.checkPermissions;
 
 public class MainActivity extends AppCompatActivity {
 
