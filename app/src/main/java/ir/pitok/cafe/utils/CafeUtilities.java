@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class CafeUtilities {
-    public static String path = "http://45.82.137.153";
+    public static String path = "server_address";
     public static int googleSignInRequestCode = 1001;
     private static char[] validSigns = {'_','.','-'};
 
