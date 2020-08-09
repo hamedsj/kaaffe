@@ -1,5 +1,5 @@
 <resources>
-    <string name="google_maps_key">AIzaSyDoSBphpoZf4zjwS2dCVmgq16MAdgTmJ6s</string>
+    <string name="google_maps_key">your_google_maps_api_key</string>
     <string name="app_name">Kaaffe</string>
     <string name="cafe">کافه</string>
     <string name="username">نام کاربری</string>
