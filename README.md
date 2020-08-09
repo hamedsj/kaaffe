@@ -1,4 +1,5 @@
-# kaaffe [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# kaaffe 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 An application for online cofee shop table reservation
 
@@ -6,7 +7,7 @@ An application for online cofee shop table reservation
 |-----------------------|-----------------------|-----------------------|-----------------------|
 
 ### Note:
-This is just an old code of mine. It was only for practice and it was for 2018. I learned so much after it. Don't do these mistakes*
+This is just an old code of mine. It was only for practice and it was for 2018. I learned so much after it. Don't make these mistakes
 
 ## License
 Copyright 2020 Shajaravi Hamid-Reza
